@@ -1,0 +1,71 @@
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  overflow: hidden; /*Check this!!!!!! it was overflow-x!*/
+}
+
+.thumbnail-box {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+  margin: 0 20px;
+  border: 2px solid transparent;
+}
+
+.thumbnail img{
+  width: 50px;
+  height: 50px;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  border: 2px solid rgb(67, 157, 231);
+  border-radius: 5px;
+}
+
+.selected-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.selected-item-container > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.selected-item-container > iframe {
+  border: none;
+}
